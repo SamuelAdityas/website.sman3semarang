@@ -1,0 +1,7 @@
+import Link from "next/link";
+import { MapPin, Phone, Mail, ArrowUpRight } from "lucide-react";
+export default function Footer(){return <footer className="site-footer"><div className="container-wide footer-main">
+  <div className="footer-brand"><div className="footer-brand-line"><img src="/images/logo-sman3.png" alt="Logo SMAN 3 Semarang"/><div><strong>SMA NEGERI 3<br/>SEMARANG</strong><span>Belajar · Bertumbuh · Berdampak</span></div></div><p>Ruang untuk mengenali potensi, membangun karakter, dan mempersiapkan generasi masa depan.</p></div>
+  <div className="footer-links"><h3>Jelajahi</h3><Link href="/about">Profil sekolah</Link><Link href="/fasilitas">Fasilitas</Link><Link href="/ekstrakurikuler">Ekstrakurikuler</Link><Link href="/prestasi">Prestasi</Link><Link href="/galeri">Galeri sekolah</Link><Link href="/berita">Berita & kegiatan</Link><Link href="/tata-tertib">Tata tertib siswa</Link></div>
+  <div className="footer-contact"><h3>Informasi</h3><p><MapPin size={17}/> Jl. Pemuda, Kota Semarang, Jawa Tengah</p><p><Phone size={17}/> Hubungi sekolah melalui kanal resmi</p><p><Mail size={17}/> Periksa situs resmi sekolah untuk kontak terbaru</p><Link className="footer-map-link" href="/galeri">Lihat lingkungan sekolah <ArrowUpRight size={15}/></Link></div>
+</div><div className="container-wide footer-bottom"><span>© {new Date().getFullYear()} SMA Negeri 3 Semarang</span><span>Website informasi sekolah · Versi pengembangan</span><Link href="/">Kembali ke atas ↑</Link></div></footer>}

@@ -1,0 +1,3 @@
+import Link from "next/link";
+import { ArrowUpRight, CalendarDays } from "lucide-react";
+export default function NewsCard({item}){return <article className="news-card"><Link href={`/berita/${item.id}`} className="news-card-image"><img src={item.image} alt={item.imageAlt||item.title} loading="lazy"/><span className="news-category">{item.category}</span><span className="news-image-arrow"><ArrowUpRight size={19}/></span></Link><div className="news-card-body"><span className="news-date"><CalendarDays size={14}/>{item.date}</span><h3><Link href={`/berita/${item.id}`}>{item.title}</Link></h3><p>{item.excerpt}</p><Link className="news-read" href={`/berita/${item.id}`}>Baca selengkapnya <ArrowUpRight size={15}/></Link></div></article>}

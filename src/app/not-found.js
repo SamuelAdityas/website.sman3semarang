@@ -1,0 +1,3 @@
+import Link from "next/link";import { ArrowLeft } from "lucide-react";
+export default function NotFound(){
+    return <section className="not-found container-wide"><span className="eyebrow"><i/> 404 · HALAMAN TIDAK DITEMUKAN</span><h1>Sepertinya kamu<br/><span>tersesat sebentar.</span></h1><p>Halaman yang dicari mungkin sudah dipindahkan atau alamatnya salah.</p><Link href="/" className="button button-gold"><ArrowLeft size={17}/> Kembali ke beranda</Link></section>}

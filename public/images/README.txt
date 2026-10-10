@@ -1,0 +1,1 @@
+Letakkan foto resmi sekolah di folder ini. Foto demo saat ini menggunakan URL Unsplash yang ditulis pada komponen dan data berita. Logo resmi dapat disimpan sebagai public/logo.png lalu digunakan di Navbar.js dan Footer.js.
