@@ -1,3 +1,4 @@
+import CmsManagedPage from "@/components/CmsManagedPage";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, BookOpen, Trophy, Zap, Lightbulb, Star, Landmark, HeartHandshake, FlaskConical, Users, MapPin, Quote } from "lucide-react";
 import Reveal from "@/components/Reveal";
@@ -14,7 +15,8 @@ const values = [
     { letter: "R", title: "Religious", text: "Menumbuhkan karakter, integritas, dan sikap saling menghormati.", icon: HeartHandshake },
 ];
 export default function Home() {
-    return <>
+    return <CmsManagedPage section="beranda">
+    <>
         <section className="hero"><img className="hero-photo" src="/images/gedung-utama.png" alt="Gedung utama SMA Negeri 3 Semarang" /><div className="hero-shade" /><div className="container-wide hero-inner"><Reveal><span className="hero-kicker"><i /> PORTAL SMA NEGERI 3 SEMARANG</span></Reveal><Reveal delay={80}><h1>Temukan potensi.<br /><em>Wujudkan masa depan.</em></h1></Reveal><Reveal delay={160}><p>Ruang bagi generasi untuk belajar dengan rasa ingin tahu, bertumbuh dalam karakter, dan berani berkarya untuk masa depan.</p></Reveal><Reveal delay={230}><div className="hero-actions"><Link href="/about" className="button button-gold">Kenali SMAN 3 <ArrowUpRight size={18} /></Link><Link href="/berita" className="button button-glass">Jelajahi kabar sekolah <ArrowRight size={18} /></Link></div></Reveal><div className="hero-bottom"><span><span className="hero-dot" /> BELAJAR · BERTUMBUH · BERKARYA</span><span>SEMARANG, JAWA TENGAH</span></div></div></section>
         <section className="intro-section section-pad"><div className="container-wide intro-grid"><Reveal><span className="eyebrow"><i /> SALAM DARI SMAN 3</span><h2 className="intro-title">Pendidikan bukan hanya tentang hari ini. <span>Ini tentang siapa yang akan kamu jadi.</span></h2><p className="intro-copy">SMA Negeri 3 Semarang menjadi ruang untuk mengenali potensi, membangun karakter, dan mempersiapkan diri menghadapi dunia yang terus berubah.</p><Link className="button button-outline" href="/about">Kenali perjalanan kami <ArrowUpRight size={17} /></Link></Reveal><Reveal delay={120}><div className="intro-photo"><img src="/images/siswa.jpg" alt="Lingkungan sekolah SMAN 3 Semarang" loading="lazy" /><div className="photo-note"><span>LINGKUNGAN SEKOLAH</span><strong>Tempat tumbuhnya<br />generasi masa depan.</strong></div></div></Reveal></div></section>
         {/* Sambutan Kepala Sekolah */}     
@@ -172,4 +174,5 @@ export default function Home() {
         </section>
 
     </>
+    </CmsManagedPage>
 }

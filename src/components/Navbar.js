@@ -12,6 +12,7 @@ const links = [
   { href: "/prestasi", label: "Prestasi" },
   { href: "/galeri", label: "Galeri" },
   { href: "/berita", label: "Berita" },
+  { href: "/tata-tertib", label: "Tata Tertib" },
 ];
 
 export default function Navbar() {
@@ -68,9 +69,8 @@ export default function Navbar() {
             </Link>
           ))}
 
-          <Link href="/tata-tertib" className="nav-cta">
-            <span>Tata tertib</span>
-            <ArrowUpRight size={18} aria-hidden="true" />
+          <Link href="/admin/login" className="nav-admin-link">
+            Admin <ArrowUpRight size={16} aria-hidden="true" />
           </Link>
         </div>
 
@@ -109,14 +109,8 @@ export default function Navbar() {
           </Link>
         ))}
 
-        <Link
-          href="/tata-tertib"
-          className="mobile-nav-cta"
-          tabIndex={open ? 0 : -1}
-          onClick={closeMenu}
-        >
-          Tata tertib siswa
-          <ArrowUpRight size={18} aria-hidden="true" />
+        <Link href="/admin/login" className="mobile-admin-link" tabIndex={open ? 0 : -1} onClick={closeMenu}>
+          Admin <ArrowUpRight size={18} aria-hidden="true" />
         </Link>
       </div>
     </header>

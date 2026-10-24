@@ -1,3 +1,4 @@
+import CmsManagedPage from "@/components/CmsManagedPage";
 import Link from "next/link";import { BookOpen, Microscope, Monitor, Users, Trees, Dumbbell, ArrowUpRight } from "lucide-react";import Reveal from "@/components/Reveal";import SectionHeading from "@/components/SectionHeading";
 export const metadata={title:"Fasilitas | SMA Negeri 3 Semarang"};
 const facilities=[
@@ -8,7 +9,8 @@ const facilities=[
     {icon:Trees,title:"Lingkungan sekolah",text:"Area sekolah yang perlu dijaga bersama agar tetap tertib dan nyaman."},
     {icon:Dumbbell,title:"Pengembangan minat",text:"Ruang dan sarana kegiatan yang mendukung pengembangan diri siswa."}];
 export default function FacilitiesPage(){
-    return <>
+    return <CmsManagedPage section="fasilitas">
+    <>
     <section className="page-hero">
         <div className="container-wide page-hero-grid">
             <div>
@@ -22,4 +24,5 @@ export default function FacilitiesPage(){
         <div className="content-callout"><div><h2>Lihat suasana sekolah</h2><p>Jelajahi dokumentasi gedung, lingkungan, dan kegiatan.</p></div>
         <Link href="/galeri" className="button button-gold">Buka galeri <ArrowUpRight size={17}/></Link></div>
         </div>
-    </section></>}
+    </section></>
+    </CmsManagedPage>}

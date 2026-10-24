@@ -1,3 +1,4 @@
+import CmsManagedPage from "@/components/CmsManagedPage";
 import Link from "next/link";
 import { ArrowUpRight, MapPin } from "lucide-react";
 import Reveal from "@/components/Reveal";
@@ -7,7 +8,8 @@ const photos = [
     { src: "/images/ruang.jpg", title: "Lingkungan sekolah", desc: "Area dan koridor sekolah." },
     { src: "/images/kegiatan-sekolah.png", title: "Kegiatan siswa", desc: "Suasana kegiatan di aula sekolah." }];
 export default function GalleryPage() {
-    return <>
+    return <CmsManagedPage section="galeri">
+    <>
         <section className="page-hero">
             <div className="container-wide"><span className="eyebrow"><i /> GALERI SEKOLAH</span><h1>Potret ruang untuk<br /><span>belajar dan bertumbuh.</span></h1><p>Jelajahi beberapa dokumentasi lingkungan dan kegiatan sekolah.</p></div>
         </section>
@@ -20,4 +22,5 @@ export default function GalleryPage() {
                 <div className="map-frame"><iframe title="Peta lokasi SMA Negeri 3 Semarang" src="https://maps.google.com/maps?q=SMA%20Negeri%203%20Semarang&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" /></div>
             </div>
         </section></>
+    </CmsManagedPage>
 }

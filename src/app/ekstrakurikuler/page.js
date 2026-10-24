@@ -1,3 +1,4 @@
+import CmsManagedPage from "@/components/CmsManagedPage";
 import Link from "next/link"; import { Palette, Music, Trophy, Leaf, Users, Heart, ArrowUpRight } from "lucide-react"; import Reveal from "@/components/Reveal"; import SectionHeading from "@/components/SectionHeading";
 export const metadata = { title: "Ekstrakurikuler | SMA Negeri 3 Semarang" };
 const groups = [
@@ -8,7 +9,8 @@ const groups = [
     { icon: Leaf, title: "Lingkungan dan kepedulian", text: "Menguatkan kebiasaan peduli terhadap sesama dan lingkungan." }, 
     { icon: Heart, title: "Sosial dan kemanusiaan", text: "Belajar berempati, melayani, dan berkontribusi secara bertanggung jawab." }];
 export default function ExtracurricularPage() {
-    return <>
+    return <CmsManagedPage section="ekstrakurikuler">
+    <>
     <section className="page-hero">
         <div className="container-wide page-hero-grid"><div>
             <span className="eyebrow"><i /> EKSTRAKURIKULER</span>
@@ -25,4 +27,5 @@ export default function ExtracurricularPage() {
             <div><h2>Ingin mengikuti kegiatan?</h2><p>Periksa jadwal, syarat keanggotaan, dan kontak pembina melalui kanal resmi sekolah.</p></div>
             <Link href="/berita" className="button button-gold">Lihat informasi <ArrowUpRight size={17} /></Link></div>
         </div>
-    </section></> }
+    </section></>
+    </CmsManagedPage> }

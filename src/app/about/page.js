@@ -1,3 +1,4 @@
+import CmsManagedPage from "@/components/CmsManagedPage";
 import Link from "next/link";
 import {
   ArrowUpRight,
@@ -17,6 +18,7 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
+    <CmsManagedPage section="profil">
     <>
       {/* Hero Profil Sekolah */}
       <section className="page-hero">
@@ -227,5 +229,6 @@ export default function AboutPage() {
         </div>
       </section>
     </>
+    </CmsManagedPage>
   );
 }
